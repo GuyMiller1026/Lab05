@@ -4,6 +4,8 @@ fn main() {
     println!("{}", is_even(4));
 
     println!("{}", is_prime(5));
+    
+    println!("{}", digit_sum(12));
 }
 
 // C++ == bool is_even(int number)
@@ -25,3 +27,13 @@ fn is_prime(number: i32) -> bool {
 		return false;
 	}
 }
+fn digit_sum(mut num: i32) -> i32 {
+	let mut sum = 0;
+	while num > 0 {
+		sum += (num % 10);
+		num /= 10;
+	}
+		
+	return sum
+}
+
