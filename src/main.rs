@@ -6,6 +6,8 @@ fn main() {
     println!("{}", is_prime(5));
     
     println!("{}", digit_sum(12));
+    
+    println!("{}", count_divisors(6));
 }
 
 // C++ == bool is_even(int number)
@@ -37,3 +39,13 @@ fn digit_sum(mut num: i32) -> i32 {
 	return sum
 }
 
+fn count_divisors(num: i32) -> i32 {
+	let mut div = 0;
+	for i in 1..=num {
+		if num % i == 0{
+			div += 1;
+		}
+	}	
+	return div;
+	
+}
